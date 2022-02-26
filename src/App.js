@@ -1,6 +1,7 @@
 import './App.css';
 import { useState } from 'react';
 import { PDFDocument } from 'pdf-lib';
+
 function App() {
   const [file, setFile] = useState(null);
   const fileToArrBuffer = (file) =>
@@ -32,8 +33,8 @@ function App() {
     page.drawImage(image, {
       width: image.scale(0.5).width,
       height: image.scale(0.5).height,
-      x: 60,
-      y: 60,
+      x: 100,
+      y: 100,
     });
 
     let b64Chunk = await pdfDoc.saveAsBase64();
